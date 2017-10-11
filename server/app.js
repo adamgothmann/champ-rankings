@@ -8,11 +8,10 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
-  console.log("in base url");
+  // console.log("in base url");
   res.sendFile(path.resolve('public/views/index.html'));
 });
 
-app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), function() {
-  console.log('on port', app.get('port'));
+app.listen(3000, function() {
+  console.log('on port 3000');
 });
